@@ -1,59 +1,100 @@
 package sortingAlgorithms;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 /* Class MergeSort */
 public class MergeSort 
 {
-    /* Merge Sort function */
-    public static void sort(int[] a, int low, int high) 
-    {
-        int N = high - low;         
-        if (N <= 1) 
-            return; 
-        int mid = low + N/2; 
-        
-        sort(a, low, mid); 
-        sort(a, mid, high); 
-        
-        int[] temp = new int[N];
-        int i = low, j = mid;
-        for (int k = 0; k < N; k++) 
-        {
-            if (i == mid)  
-                temp[k] = a[j++];
-            else if (j == high) 
-                temp[k] = a[i++];
-            else if (a[j]<a[i]) 
-                temp[k] = a[j++];
-            else 
-                temp[k] = a[i++];
-        }    
-        for (int k = 0; k < N; k++) 
-            a[low + k] = temp[k];         
-    }
-    /* Main method */
-    public static void main(String[] args) 
-    {
-        Scanner scan = new Scanner( System.in );        
-        System.out.println("Merge Sort Test\n");
-        int n, i;
-  
-        System.out.println("Enter number of integer elements");
-        n = scan.nextInt();
-     
-        int arr[] = new int[ n ];
-       
-        System.out.println("\nEnter "+ n +" integer elements");
-        for (i = 0; i < n; i++)
-            arr[i] = scan.nextInt();
-    
-        sort(arr, 0, n);
-       
-        System.out.println("\nElements after sorting ");        
-        for (i = 0; i < n; i++)
-            System.out.print(arr[i]+" ");            
-        System.out.println();            
-    }    
-}
+ public static void main(String[] args){
+	 
+	 int n;
+		
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		n=sc.nextInt();
+		int i;
+		int[] a=new int[n];
+		for(i=0;i<a.length;i++){
+			a[i]=sc.nextInt();
+		}
+	 	mergeSort(a); 
+	 	  System.out.print("Sorted array ");
+			
+			for( i=0;i<a.length;i++){
+				System.out.print(a[i]+" ");// print final array
+			}
+	 
+	 
+ }
+ 
+ public static void mergeSort(int[] a){
+	 int size = a.length;
+	 if(size<=1)
+		 return;
+     int mid = size / 2;
+     int leftSize = mid;
+     int rightSize = size - mid;
+     int[] left = new int[leftSize];
+     int[] right = new int[rightSize];
+     for (int i = 0; i < mid; i++) {
+         left[i] = a[i];
+
+     }
+     for (int i = mid; i < size; i++) {
+         right[i - mid] = a[i];
+     }
+     mergeSort(left);
+     mergeSort(right);
+     merge(left, right, a);
+
+
+ }
+ public static void merge(int left[], int right[], int[]a){
+	 
+	 
+	 int leftSize = left.length;
+     int rightSize = right.length;
+     int i = 0, j = 0, k = 0;
+     while (i < leftSize && j < rightSize) {
+         if (left[i] <= right[j]) {
+             a[k] = left[i];
+             i++;
+             k++;
+         } else {
+             a[k] = right[j];
+             k++;
+             j++;
+         }
+     }
+     while (i < leftSize) {
+         a[k] = left[i];
+         k++;
+         i++;
+     }
+     while (j < leftSize) {
+         a[k] = right[j];
+         k++;
+         j++;
+     }
+   
+ }
+	 
+	 
+	 
+	 
+ }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+
 
