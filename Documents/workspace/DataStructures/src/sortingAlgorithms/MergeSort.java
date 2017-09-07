@@ -41,7 +41,7 @@ public class MergeSort
      for (int i = 0; i < mid; i++) {
          left[i] = a[i];
 
-     }
+     } 
      for (int i = mid; i < size; i++) {
          right[i - mid] = a[i];
      }
