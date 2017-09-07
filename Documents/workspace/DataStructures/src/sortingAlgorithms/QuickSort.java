@@ -60,9 +60,7 @@ public class QuickSort {
 			Quick(a, L, j);
 		if(i<R)
 			Quick(a, i, R);
-		
-		
-		
+				
 		
 	}
 	
