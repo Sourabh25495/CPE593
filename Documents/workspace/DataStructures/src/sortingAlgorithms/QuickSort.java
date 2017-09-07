@@ -19,7 +19,7 @@ public class QuickSort {
 		int L=0;
 		int R=a.length-1;
 		Quick(a,L,R);
-		System.out.print("Sorted array is ");
+		System.out.print("Sorted array is: ");
 		
 		System.out.println(Arrays.toString(a));
 
