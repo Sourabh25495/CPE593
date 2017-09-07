@@ -30,8 +30,9 @@ public class MergeSort
  
  public static void mergeSort(int[] a){
 	 int size = a.length;
-	 if(size<=1)
+	 if(size<=1){
 		 return;
+	 }
      int mid = size / 2;
      int leftSize = mid;
      int rightSize = size - mid;
