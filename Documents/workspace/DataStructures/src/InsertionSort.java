@@ -17,19 +17,22 @@ public class InsertionSort {
 
 	}
 	public static  void Insertion(int a[], int n){
-		for(int i=1;i<n;i++){
-			int temp=a[i];
-			for(int j=i;j>=0;j--){
-				if(a[j]>=temp){
-					a[j+1]=a[j];
-				}else{
-					a[j+1]=temp;
-				break;
-				}
-					
-			}
-			a[0]=temp;
-		}
+		for (int i=1; i<n; ++i)
+        {
+            int key = a[i];
+            int j = i-1;
+ 
+            /* Move elements of arr[0..i-1], that are
+               greater than key, to one position ahead
+               of their current position */
+            while (j>=0 && a[j] > key)
+            {
+                a[j+1] = a[j];
+                j = j-1;
+            }
+            a[j+1] = key;
+        }
+		
 System.out.print("Sorted array ");
 		
 		for(int i=0;i<n;i++){
