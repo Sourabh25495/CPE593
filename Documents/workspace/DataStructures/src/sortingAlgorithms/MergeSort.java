@@ -53,7 +53,7 @@ public class MergeSort
  }
  public static void merge(int left[], int right[], int[]a){
 	 
-	 
+	  
 	 int leftSize = left.length;
      int rightSize = right.length;
      int i = 0, j = 0, k = 0;
