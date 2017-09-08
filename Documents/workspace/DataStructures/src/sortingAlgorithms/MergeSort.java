@@ -28,7 +28,7 @@ public class MergeSort
 	 
  }
 
- // change 12
+ // change 123
  public static void mergeSort(int[] a){
 	 int size = a.length;
 	 if(size<=1){
