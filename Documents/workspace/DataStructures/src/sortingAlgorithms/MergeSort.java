@@ -27,7 +27,8 @@ public class MergeSort
 	 
 	 
  }
- // change 1
+
+ // change 12
  public static void mergeSort(int[] a){
 	 int size = a.length;
 	 if(size<=1){
@@ -51,9 +52,15 @@ public class MergeSort
 
 
  }
- public static void merge(int left[], int right[], int[]a){
+
 	 
 	  
+
+
+ public static void merge(int left[], int right[], int[]a){
+	 
+	 
+
 	 int leftSize = left.length;
      int rightSize = right.length;
      int i = 0, j = 0, k = 0;

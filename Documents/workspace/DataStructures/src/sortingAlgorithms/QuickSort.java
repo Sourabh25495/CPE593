@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class QuickSort {
 
 	public static void main(String[] args) {
-		// TODO Au to-generated method stub
+
 		int n;
 		
 		Scanner sc= new Scanner(System.in);
