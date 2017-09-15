@@ -18,16 +18,17 @@ public class InsertionSort {
 
 	}
 	public static  void Insertion(int a[], int n){
+		int count=0, compare=0;
 		for (int i=1; i<n; ++i)
         {
             int temp = a[i];
             int j = i-1;
  
-          
             while (j>=0 && a[j] > temp)
             {
                 a[j+1] = a[j];
                 j = j-1;
+                count++;
             }
             a[j+1] = temp;
         }
@@ -37,6 +38,7 @@ System.out.print("Sorted array ");
 		for(int i=0;i<n;i++){
 			System.out.print(a[i]+" ");// print final array
 		}
+		System.out.print("No. of swaps "+ count);
 		
 	}
 	
