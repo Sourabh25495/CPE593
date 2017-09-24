@@ -57,8 +57,8 @@ public class QuickSort {
 		}
  
 		if(L<j)
-			Quick(a, L, j);
-		if(i<R)
+			Quick(a, L, i);
+	    if(i<R)
 			Quick(a, i, R);
 				
 		
