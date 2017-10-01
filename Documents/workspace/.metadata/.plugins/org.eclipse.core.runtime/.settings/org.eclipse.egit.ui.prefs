@@ -1,0 +1,4 @@
+StagingView_Presentation=COMPACT_TREE
+StagingView_Presentation_Changed=true
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>error checking</message>\n<message>Heap sort</message>\n<message>Bubble sort with all iterations </message>\n<message>Bubble sort iteration.</message>\n<message>Binary search</message>\n<message>Linear search</message>\n<message>Heap</message>\n<message>Merge</message>\n<message>HeapSort</message>\n<message>final merge sort</message>\n</messages>
+eclipse.preferences.version=1

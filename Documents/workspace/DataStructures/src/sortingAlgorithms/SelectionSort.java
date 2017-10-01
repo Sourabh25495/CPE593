@@ -23,22 +23,17 @@ public class SelectionSort {
 	
 		
 	
-	
-		for( i=n-1;i>0;i--){
-			int pos=0;
-			for(int j=1;j<i;j++){
-				if(a[j]>a[pos])
-					pos=j;	
-			}
-
-			
-			// now you have incremented the position. Swap the contents sitting on them
-			int temp=a[pos];
-			a[pos]=a[i];
-			a[i]=temp;	
-			
-		
-		}
+		for ( i = 0; i < a.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < a.length; j++)
+                if (a[j] < a[index]) 
+                    index = j;
+      
+            int smallerNumber = a[index];  
+            a[index] = a[i];
+            a[i] = smallerNumber;
+        }
 		
 		System.out.print("Sorted array ");
 		
