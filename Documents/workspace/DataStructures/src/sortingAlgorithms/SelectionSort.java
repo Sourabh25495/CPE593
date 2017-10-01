@@ -32,7 +32,7 @@ public class SelectionSort {
       
             int smallerNumber = a[index];  
             a[index] = a[i];
-            a[i] = smallerNumber;
+             a[i] = smallerNumber;
         }
 		
 		System.out.print("Sorted array ");
